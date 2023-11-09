@@ -16,6 +16,19 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    
+    NSDictionary* dictionary = [[NSDictionary alloc] initWithObjectsAndKeys:
+                                @"Petrov", @"lastName",
+                                @"Vasiliy", @"name",
+                                [NSNumber numberWithInt:25], @"age",
+                                [NSNumber numberWithInt:30], @"age2",
+                                nil, @"city",
+                                [NSNumber numberWithInt:40], @"age3",
+                                nil];
+    
+    NSLog(@"%@", dictionary);
+    
     return YES;
 }
 
