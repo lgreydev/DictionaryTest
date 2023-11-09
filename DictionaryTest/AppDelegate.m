@@ -33,8 +33,8 @@
     
 //    NSLog(@"%@, count = %ld", dictionary2, [dictionary2 count]);
     
-    NSLog(@"%@, count = %ld", dictionary3, [dictionary3 count]);
-    NSLog(@"name = %@", [dictionary3 objectForKey:@"name"]);
+//    NSLog(@"%@, count = %ld", dictionary3, [dictionary3 count]);
+//    NSLog(@"name = %@", [dictionary3 objectForKey:@"name"]);
 /*
     NSLog(@"name = %@, lastName = %@, age = %ld, count = %ld",
           [dictionary objectForKey:@"name"],
@@ -42,6 +42,13 @@
           [[dictionary objectForKey:@"age"] integerValue],
           [dictionary count]);
 */
+    
+    for (NSString* key in [dictionary allKeys]) {
+        
+        id obj = [dictionary objectForKey:key];
+        
+        NSLog(@"%@ = %@ ", key, obj);
+    }
     
     return YES;
 }
