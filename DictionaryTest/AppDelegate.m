@@ -27,7 +27,21 @@
                                 [NSNumber numberWithInt:40], @"age3",
                                 nil];
     
-    NSLog(@"%@", dictionary);
+    NSDictionary* dictionary2 = [NSDictionary dictionaryWithObjectsAndKeys:@"Mike", @"name", nil];
+    
+    NSDictionary* dictionary3 = @{@"name": @"Tom", @"lastName": @"Hary", @"age": @"34"};
+    
+//    NSLog(@"%@, count = %ld", dictionary2, [dictionary2 count]);
+    
+    NSLog(@"%@, count = %ld", dictionary3, [dictionary3 count]);
+    NSLog(@"name = %@", [dictionary3 objectForKey:@"name"]);
+/*
+    NSLog(@"name = %@, lastName = %@, age = %ld, count = %ld",
+          [dictionary objectForKey:@"name"],
+          [dictionary objectForKey:@"lastName"],
+          [[dictionary objectForKey:@"age"] integerValue],
+          [dictionary count]);
+*/
     
     return YES;
 }
